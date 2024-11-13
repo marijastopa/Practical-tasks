@@ -14,7 +14,7 @@ while [[ $# -gt 0 ]]; do
             ;;
         -n)
             shift
-            while [[ "$1" =~ ^[0-9]+$ ]]; do  # Only allow non-negative numbers
+            while [[ "$1" =~ ^-?[0-9]+$ ]]; do  # Allow both positive and negative integers
                 numbers+=("$1")
                 shift
             done
